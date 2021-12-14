@@ -44,5 +44,13 @@ public class PermuteSolution {
         System.out.println(
             new PermuteSolution().permute(nums)
         );
+        // 通过 Arrays.asList() 或 List.of() 将基本类型数组转为 List
+        // 这样得到的不是 ArrayList 而是内部实现的一种 List
+//        List<int[]> list = List.of(nums);
+        // stream 对象转回 List
+        // 可以使用 list.stream().collect(Collectors.toList())
+        // 或者直接 new ArrayList<>(list)
+//        List<int[]> collect = new ArrayList<>(list);
+//        System.out.println(collect);
     }
 }
