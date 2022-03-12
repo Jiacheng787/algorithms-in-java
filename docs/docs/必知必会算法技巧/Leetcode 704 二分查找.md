@@ -53,12 +53,12 @@ int binarySolution(int[] nums, int target) {
 
 对于本题的题解如下：
 
-```java
+```java {4,6,11,13}
 class Solution {
   public int search(int[] nums, int target) {
     int left = 0;
     int right = nums.length - 1; // 注意
-    // 注意
+    
     while (left <= right) {
       int mid = left + (right - left) / 2;
       if (nums[mid] == target) {

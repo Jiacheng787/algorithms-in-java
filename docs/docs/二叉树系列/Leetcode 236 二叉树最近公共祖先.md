@@ -116,21 +116,30 @@ TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 ```java
 class Solution {
   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    // base case
+    // 两个 base case
+    // 1.如果 root 为空，直接返回 null
     if (root == null) return null;
+    // 2.如果 root 本身就是 p 或者 q
+    // 例如 root 是 p 节点，如果 q 存在于以 root 为根的树中，显然 root 就是最近公共祖先
+    // 即使 q 不存在于以 root 为根的树中，按照情况 3 的定义，也应该返回 root 节点
     if (root == p || root == q) return root;
 
     TreeNode left = lowestCommonAncestor(root.left, p, q);
     TreeNode right = lowestCommonAncestor(root.right, p, q);
-    // 情况 1
-    if (left != null && right !=  null) {
+
+    // 在后序位置分情况讨论
+    // 情况 1，如果 p 和 q 都在以 root 为根的树中
+    // 那么 left 和 right 一定分别是 p 和 q（从 base case 看出）
+    // 由于后序位置是从下往上，就好比从 p 和 q 出发往上走
+    // 第一次相交的节点就是这个 root，显然就是最近公共祖先
+    if (left != null && right != null) {
       return root;
     }
-    // 情况 2
+    // 情况 2，如果 p 和 q 都不在以 root 为根的树中，直接返回 null
     if (left == null && right == null) {
       return null;
     }
-    // 情况 3
+    // 情况 3，如果 p 和 q 只有一个存在于 root 为根的树中，函数返回该节点
     return left == null ? right : left;
   }
 }
