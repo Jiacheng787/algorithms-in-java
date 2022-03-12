@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalgorithm_java=self.webpackChunkalgorithm_java||[]).push([[975],{6575:function(a){a.exports=JSON.parse('{"allTagsPath":"/algorithms-in-java/blog/tags","slug":"/algorithms-in-java/blog/tags/facebook","name":"facebook","count":1,"permalink":"/algorithms-in-java/blog/tags/facebook"}')}}]);
