@@ -1,0 +1,29 @@
+name: Alogrithm in Java
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Build
+        run: |
+          cd docs
+          npm install yarn -g
+          yarn
+          yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build
+          publish_branch: gh-pages
+          full_commit_message: ${{ github.event.head_commit.message }}
