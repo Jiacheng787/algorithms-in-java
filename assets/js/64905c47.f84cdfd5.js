@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalgorithm_java=self.webpackChunkalgorithm_java||[]).push([[8459],{9012:function(a){a.exports=JSON.parse('{"permalink":"/algorithms-in-java/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

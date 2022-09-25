@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalgorithm_java=self.webpackChunkalgorithm_java||[]).push([[838],{2398:function(a){a.exports=JSON.parse('{"permalink":"/algorithms-in-java/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
